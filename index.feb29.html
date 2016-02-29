@@ -2,6 +2,26 @@
 <html>
 	<head>
 		<title>Unit 1 - Day 1 - Image Gallery in HTML</title>
+		<style type="text/css" media="screen">
+			body{
+				background-color: #222;
+				color:#ddd;
+				margin-top: 20px;
+			}
+			.thumbnails img {
+				height: 80px;
+				border: 4px solid #555;
+				margin: 0 10px 10px 0;
+
+			}
+			.thumbnails img:hover{
+				border: 4px solid #0cf;
+				cursor: pointer;
+			}
+			.gallery, .preview{
+				text-align: center;
+			}
+		</style>
 	</head>
 			<body>
 				<!-- Create a wrapper div. Everything in the page wil be inside of this -->
@@ -10,13 +30,18 @@
 					<h2>Unit 1 - Day 1 - My first project</h2>
 					<!-- Lets make a new line with a br tag -->
 					<br>
+					<!-- The images in our thumbnail section -->
 					<div class="thumbnails">
-						<img src="images/Archive/image1.jpg" name="img1">
-						<img src="images/Archive/image2.jpg" name="img2">
-						<img src="images/Archive/image3.jpg" name="img3">
-						<img src="images/Archive/image4.jpg" name="img4">
-						<img src="images/Archive/image5.jpg" name="img5">
+						<img src="images/Archive/image1.jpg" name="img1" onclick="preview.src=img1.src">
+						<img src="images/Archive/image2.jpg" name="img2" onclick="preview.src=img2.src">
+						<img src="images/Archive/image3.jpg" name="img3" onclick="preview.src=img3.src">
+						<img src="images/Archive/image4.jpg" name="img4" onclick="preview.src=img4.src">
+						<img src="images/Archive/image5.jpg" name="img5" onclick="preview.src=img5.src">
 
+					</div>
+					<!-- The preview window for our thumbnails -->
+					<div class="preview">
+						<img name="preview" src="images/Archive/image1.jpg""
 					</div>
 
 
